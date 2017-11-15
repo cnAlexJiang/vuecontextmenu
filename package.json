@@ -1,0 +1,66 @@
+{
+  "name": "ci-contextmenu",
+  "description": "copy from <xbtop1@gmail.com>, add fonts in this moudle ",
+  "version": "1.1.1",
+  "author": "XBT1 <xbtop1@gmail.com>",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "vue",
+    "contextmenu",
+    "vue-contextmenu",
+    "vue-component",
+    "rightclick"
+  ],
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --content-base examples/ --open --hot",
+    "build": "npm run build:package & npm run build:example",
+    "build:package": "node build/index.js",
+    "build:example": "rm -fr sites && cross-env NODE_ENV=production webpack --progress --hide-modules && cp examples/index.html sites",
+    "ghpages": "npm run build:example && node build/gh-pages.js",
+    "pb": "npm run build:package && npm publish"
+  },
+  "dependencies": {
+    "vue": "^2.4.4"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "cross-env": "^5.0.5",
+    "css-loader": "^0.28.7",
+    "file-loader": "^1.1.4",
+    "fs-extra": "^4.0.2",
+    "gh-pages": "^1.0.0",
+    "style-loader": "^0.19.0",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.1",
+    "url-loader": "^0.6.2",
+    "vue-loader": "^13.0.5",
+    "vue-template-compiler": "^2.4.4",
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.9.1"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/XBT1/v-contextmenu.git"
+  },
+  "bugs": {
+    "url": "https://github.com/XBT1/v-contextmenu/issues"
+  },
+  "homepage": "https://github.com/XBT1/v-contextmenu",
+  "engines": {
+    "node": ">= 4.0.0",
+    "npm": ">= 3.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "_from": "v-contextmenu@1.1.1",
+  "_resolved": "http://registry.npm.taobao.org/v-contextmenu/download/v-contextmenu-1.1.1.tgz"
+}
