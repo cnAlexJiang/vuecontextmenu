@@ -90,3 +90,4 @@ $ yarn build # build:package & build:example
 [url-releases]: https://github.com/XBT1/v-contextmenu/releases
 
 [image-npm]: https://nodei.co/npm/v-contextmenu.png
+
